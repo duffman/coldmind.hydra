@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Electron boilerplate</title>
+	<!-- <link rel="stylesheet" href="index.css"> -->
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		//var socket = new io();
+
+		var CONNECT				= "connect";			// Fired upon a successful connection
+		var CONNECT_ERROR		= "connect_error";		// Fired upon a connection error
+		var CONNECT_TIMEOUT		= "connect_timeout";	// Fired upon a connection timeout.
+		var RECONNECT			= "reconnect";			// Fired upon a successful reconnection.
+		var RECONNECT_ATTEMPT	= "reconnect_attempt";	// Fired upon an attempt to reconnect.
+		var RECONNECTING		= "reconnecting";		// Fired upon an attempt to reconnect.
+		var RECONNECT_ERROR		= "reconnect_error";	// Fired upon a reconnection attempt error.
+		var RECONNECT_FAILED	= "reconnect_failed";	// Fired when couldn’t reconnect within reconnectionAttempts	
+
+		var CONNECTION			= "connection";
+		var DISCONNECT			= "disconnect";
+		var MESSAGE				= "message";
+		var EVENT				= "event";
+
+        function ClientCore() {
+        	this.socket = null;
+			
+			this.init = function() {
+				console.log("initialize");
+				this.socket = new io();	
+
+				this.socket.on(CONNECT, function(){
+					console.log(CONNECT);
+				});
+
+				this.socket.on(DISCONNECT, function(){
+					console.log(DISCONNECT);
+				});
+
+				this.socket.on(MESSAGE, function(data) {
+					console.log(MESSAGE, data);	
+				});
+
+				this.socket.on(EVENT, function(data) {
+					console.log(EVENT, data);
+				});
+
+			}
+
+			this.sendData = function(data) {
+				this.socket.emit("message", "Hello");
+			}
+
+			this.sayHello = function() {
+				console.log("Hello from ClientCore");
+			}
+        }
+        
+        var clientCore = new ClientCore();
+        clientCore.init();
+		clientCore.sayHello();
+		
+
+//		var socket = new io();
+//		socket.emit("Jalle");
+	
+		var self = this;
+
+        $(document).ready(function() {
+			$('#btnTest').bind('click', function(event) {
+				var dataString = "Hello kalle";
+				console.log("Emitting data:", dataString);
+				self.clientCore.sendData(dataString);
+			});
+        });
+
+        /*
+        const remote = require('electron').remote;
+        const Menu = remote.Menu;
+        const MenuItem = remote.MenuItem;
+
+        var menu = new Menu();
+        menu.append(new MenuItem({ label: 'MenuItem1', click: function() { console.log('item 1 clicked'); } }));
+        menu.append(new MenuItem({ type: 'separator' }));
+        menu.append(new MenuItem({ label: 'MenuItem2', type: 'checkbox', checked: true }));
+
+        window.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        menu.popup(remote.getCurrentWindow());
+        }, false);
+        */
+	</script>
+</head>
+<body>
+    <div class="container">
+		<header>
+			<h1>Electron boilerplate</h1>
+		</header>
+		<section class="main">
+        
+			<button id="btnTest">Test</button>
+		
+		
+        </section>
+	
+        <footer></footer>
+	</div>
+</body>
+</html>

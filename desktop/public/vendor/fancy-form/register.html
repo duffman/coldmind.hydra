@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		
+		<title>FancyForms - Responsive CSS Forms Framework</title>
+		
+		<!--=================================================================
+			CSS Stylesheets
+		=================================================================-->
+		<link rel='stylesheet' type='text/css' href='css/layout.css' >
+		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/grid.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/fancyforms.css' >		
+	</head>
+	
+	<body>
+		
+		<div class='ff-center-content' >
+			<div class='ff-inner' >
+				
+				<!--form-box-->
+				<div class='ff-form-box' >
+					
+					<form>
+					
+						<!--header-->
+						<div class='ff-header' >
+							<h2>Sign Up</h2>
+						</div>
+						<!--/header-->
+						
+						<!--full name input-->
+						<div class='ff-form-row' >
+							<input class='ff-text' type='text' placeholder='Full Name' >
+						</div>
+						<!--/full name input-->
+						
+						
+						<!--email input-->
+						<div class='ff-form-row' >
+							<input class='ff-text' type='email' placeholder='Email' >
+						</div>
+						<!--/email input-->
+						
+						
+						<!--password input-->
+						<div class='ff-form-row' >
+							<input class='ff-text' type='password' placeholder='Password' >
+						</div>
+						<!--/password input-->
+						
+						<!--username input-->
+						<div class='ff-form-row' >
+							<input class='ff-text' type='text' placeholder='Username' >
+						</div>
+						<!--/username input-->
+						
+						
+						<div class='ff-form-row row ff-mt-30' >
+							
+							<div class='col-sm-4 hidden-xs' >
+								<p>Gender:</p>
+							</div>
+							
+							<!--checkbox-male-->
+							<div class='col-sm-4 col-xs-6' >
+								<div class='ff-checkbox-main' >
+									<div class='ff-checkbox ff-radio' >
+										<input id='male' type='radio' name='gender' >
+										<span></span>
+									</div>
+									<label class='ff-label' for='male' >Male</label>
+								</div>
+							</div>
+							<!--/checkbox-male-->
+							
+							<!--checkbox-female-->
+							<div class='col-sm-4 col-xs-6' >
+								<div class='ff-checkbox-main' >
+									<div class='ff-checkbox ff-radio' >
+										<input id='female' type='radio' name='gender' >
+										<span></span>
+									</div>
+									<label class='ff-label' for='female' >Female</label>
+								</div>
+							</div>
+							<!--/checkbox-female-->
+							
+						</div>
+						
+						
+						<div class='ff-form-row ff-mt-30' >
+							
+							<!--terms checkbox-->
+							<div class='ff-checkbox-main' >
+								
+								<div class='ff-checkbox' >
+									<input id='terms' type='checkbox' checked>
+									<span></span>
+								</div>
+								
+								<label class='ff-label' for='terms' >I accept the terms and privacy policy.</label>
+								
+							</div>
+							<!--terms checkbox-->
+							
+							
+						</div>
+						
+						<div class='ff-form-row ff-mt-30' >
+							
+							<!--sign up btn-->
+							<button type='submit' class='ff-btn ff-block' >
+								Sign Up
+							</button>
+							<!--/sign up btn-->
+							
+						</div>
+					</form>
+				</div>
+				<!--/form-box-->
+				
+			</div>
+		</div>
+		
+		
+		<!--for alert's close button-->
+		<script>
+			var $alerts = document.querySelectorAll('.ff-alert > .ff-close');
+			for( i=0; i<$alerts.length; i++){
+				$alerts[i].addEventListener('click',function(e){
+					e.preventDefault();
+					this.parentNode.parentNode.removeChild(this.parentNode);
+				});
+			}
+		</script>
+		<!--/for alert's close button-->
+		
+	</body>
+</html>

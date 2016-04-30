@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		
+		<!--Your Page Title-->
+		<title>FancyForms - Responsive CSS Forms Framework</title>
+		
+		<!--=================================================================
+			CSS Stylesheets
+		=================================================================-->
+		<link rel='stylesheet' type='text/css' href='css/layout.css' >
+		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/grid.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/fancyforms.css' >
+		
+	</head>
+	
+	<body>
+		
+		
+		<div class='ff-center-content' >
+			<div class='ff-inner' >
+			
+				
+				
+				<!--form-box-->
+				<div class='ff-form-box ff-large' >
+					
+					
+					<!--header-->
+					<div class='ff-header' >
+						<h2>Components</h2>
+					</div>
+					<!--/header-->
+					
+					
+					<!--separator-->
+					<div class='ff-separator' >
+						<span>A Simple Separator</span>
+					</div>
+					<!--/separator-->
+					
+					
+					<div class='row' >
+						
+						<div class='col-sm-6' >
+							<div class='ff-form-row' >
+								
+								<!--input with icon-->
+								<div class='ff-icon-input' >
+									<input class='ff-text' type='text' placeholder='Input with icon' >
+									<i class='ion-android-person' ></i>
+								</div>
+								<!--/input with icon-->
+								
+							</div>						
+						</div>
+						
+						<div class='col-sm-6' >
+							
+							<!--input without icon-->
+							<div class='ff-form-row' >
+								<input class='ff-text' type='text' placeholder='Input without icon' >
+							</div>
+							<!--/input without icon-->
+							
+						</div>
+						
+					</div>
+					
+					<div class='ff-form-row' >
+					
+						<!--selectbox-->
+						<select class='ff-selectbox ff-block' >
+							<option value='0' disabled selected>Custom Designed Select Box</option>
+							<option value='1'>Item 1</option>
+							<option value='2'>Item 2</option>
+							<option value='3'>Item 3</option>
+							<option value='4'>Item 4</option>
+						</select>
+						<!--/selectbox-->
+					
+					</div>
+					
+					<div class='ff-form-row' >
+						
+						<!--input with icon & button-->
+						<div class='ff-icon-input' >
+							
+							<input class='ff-text' type='text' placeholder='Text input with button' >
+							
+							<i class='ion-document-text' ></i>
+							
+							<a href='#' class='input-btn' >
+								<i class='ion-ios-help-empty' ></i>
+							</a>
+							
+						</div>
+						<!--/input with icon & button-->
+						
+					</div>
+					
+					<div class='ff-form-row' >
+						<!--textarea with icon-->
+						<div class='ff-icon-input' >
+							<textarea class='ff-text' placeholder='Simple Textarea' rows='4' ></textarea>
+							<i class='ion-android-textsms' ></i>
+						</div>
+						<!--/textarea with icon-->
+					</div>
+					
+					<!--separator-->
+					<div class='ff-separator' >
+						<span>Buttons</span>
+					</div>
+					<!--/separator-->
+					
+					
+					<div class='row' >
+						
+						<div class='col-sm-6' >
+							<div class='ff-form-row' >
+								<!--button with icon on left-->
+								<a href='#' class='ff-btn ff-icon-btn ff-block' >
+									<i class='ion-ios-cart' ></i>
+									Icon Left
+								</a>
+								<!--/button with icon on left-->
+							</div>
+						</div>
+						
+						<div class='col-sm-6' >
+							<div class='ff-form-row' >
+								<!--/button with icon on right-->
+								<a href='#' class='ff-btn ff-icon-btn ff-icon-right ff-block' >
+									Icon Right
+									<i class='ion-ios-cart' ></i>
+								</a>
+								<!--/button with icon on right-->
+							</div>
+						</div>
+						
+					</div>
+					
+					
+					<div class='row' >
+						
+						<div class='col-sm-6' >
+							<div class='ff-form-row' >
+								<!--primary btn-->
+								<a href='#' class='ff-btn ff-block' >Primary Btn</a>
+								<!--/primary btn-->
+							</div>
+						</div>
+						
+						<div class='col-sm-6' >
+							<div class='ff-form-row' >
+								<!--secondary btn-->
+								<a href='#' class='ff-btn ff-secondary ff-block' >Secondary Btn</a>
+								<!--/secondary btn-->
+							</div>
+						</div>
+						
+					</div>
+					
+					
+					<!--separator-->
+					<div class='ff-separator' >
+						<span>Ratings, Checkboxes & Radio Buttons</span>
+					</div>
+					<!--/separator-->
+					
+					<div class='ff-form-row row' >
+						
+						<div class='col-sm-6' >
+							
+							<!--checkbox-->
+							<div class='ff-checkbox-main' >
+								
+								<div class='ff-checkbox' >
+									<input id='checkbox1' type='checkbox' checked>
+									<span></span>
+								</div>
+								
+								<label class='ff-label' for='checkbox1' >Checkbox 1</label>
+								
+							</div>
+							<!--/checkbox-->
+							
+							<!--checkbox-->
+							<div class='ff-checkbox-main ff-mt-30' >
+								
+								<div class='ff-checkbox' >
+									<input id='checkbox2' type='checkbox' >
+									<span></span>
+								</div>
+								
+								<label class='ff-label' for='checkbox2' >Checkbox 2</label>
+								
+							</div>
+							<!--/checkbox-->
+							
+							<!--checkbox-->
+							<div class='ff-checkbox-main ff-mt-30' >
+								
+								<div class='ff-checkbox' >
+									<input id='checkbox3' type='checkbox' checked>
+									<span></span>
+								</div>
+								
+								<label class='ff-label' for='checkbox3' >Checkbox 3</label>
+								
+							</div>
+							<!--/checkbox-->
+							
+						</div>
+						
+						<div class='col-sm-6' >
+							
+							
+							<!--radio btn-->
+							<div class='ff-checkbox-main' >
+								
+								<div class='ff-checkbox ff-radio' >
+									<input id='radio1' type='radio' name='radio' >
+									<span></span>
+								</div>
+								
+								<label class='ff-label' for='radio1' >Radio 1</label>
+								
+							</div>
+							<!--/radio btn-->
+							
+							
+							<!--radio btn-->
+							<div class='ff-checkbox-main ff-mt-30' >
+								
+								<div class='ff-checkbox ff-radio' >
+									<input id='radio2' type='radio' name='radio' checked>
+									<span></span>
+								</div>
+								
+								<label class='ff-label' for='radio2' >Radio 2</label>
+								
+							</div>
+							<!--/radio btn-->
+							
+							
+							<!--radio btn-->
+							<div class='ff-checkbox-main ff-mt-30' >
+								
+								<div class='ff-checkbox ff-radio' >
+									<input id='radio3' type='radio' name='radio' >
+									<span></span>
+								</div>
+								
+								<label class='ff-label' for='radio3' >Radio 3</label>
+								
+							</div>
+							<!--/radio btn-->
+							
+							
+						</div>
+						
+					</div>
+					
+					<div class='ff-form-row ff-mt-30' >
+						
+						<p>Ratings:</p>
+						
+						<!--ratings stars-->
+						<div class='ff-ratings'>
+							
+							<input type='radio' id='5s' name='star'>
+							<label for='5s'>
+								<i class='ion-ios-star'></i>
+							</label>
+							
+							<input type='radio' id='4s' name='star'>
+							<label for='4s'>
+								<i class='ion-ios-star'></i>
+							</label>
+							
+							<input type='radio' id='3s' name='star' checked>
+							<label for='3s'>
+								<i class='ion-ios-star'></i>
+							</label>
+							
+							<input type='radio' id='2s' name='star'>
+							<label for='2s'>
+								<i class='ion-ios-star'></i>
+							</label>
+							
+							<input type='radio' id='1s' name='star'>
+							<label for='1s'>
+								<i class='ion-ios-star'></i>
+							</label>
+							
+						</div>
+						<!--/ratings stars-->
+					
+					</div>
+					
+					<!--separator-->
+					<div class='ff-separator' >
+						<span>Alerts</span>
+					</div>
+					<!--/separator-->
+					
+					<div class='ff-form-row ff-mt-30' >
+						
+						<!--simple alert-->
+						<div class='ff-alert' >
+							
+							<a href='#' class='ff-close' >
+								<i class='ion-android-close' ></i>
+							</a>
+							
+							<p>
+								This is just a simple alert
+							</p>
+							
+						</div>
+						<!--/simple alert-->
+						
+					</div>
+					
+					<div class='ff-form-row ff-mt-30' >
+						
+						<!--success alert-->
+						<div class='ff-alert ff-success' >
+							
+							<a href='#' class='ff-close' >
+								<i class='ion-android-close' ></i>
+							</a>
+							
+							<p>
+								This is just a success alert
+							</p>
+							
+						</div>
+						<!--/success alert-->
+						
+					</div>
+					
+					<div class='ff-form-row ff-mt-30' >
+						
+						<!--error alert-->
+						<div class='ff-alert ff-error' >
+							
+							<a href='#' class='ff-close' >
+								<i class='ion-android-close' ></i>
+							</a>
+							
+							<p>
+								This is just a error alert
+							</p>
+							
+						</div>
+						<!--/error alert-->
+						
+					</div>
+					
+					<div class='ff-form-row ff-mt-30' >
+						
+						<!--warning alert-->
+						<div class='ff-alert ff-warning' >
+							
+							<a href='#' class='ff-close' >
+								<i class='ion-android-close' ></i>
+							</a>
+							
+							<p>
+								This is just a warning alert
+							</p>
+							
+						</div>
+						<!--/warning alert-->
+						
+					</div>
+					
+					
+					
+					<!--separator-->
+					<div class='ff-separator' >
+						<span>Textbox States</span>
+					</div>
+					<!--/separator-->
+					
+					
+					<div class='ff-form-row ff-mt-30' >
+						
+						<!--normal textbox-->
+						<div class='ff-icon-input' >
+							<input class='ff-text ff-success' type='text' placeholder='Success' >
+							<i class='ion-ios-checkmark' ></i>
+						</div>
+						<!--/normal textbox-->
+						
+					</div>
+					
+					<div class='ff-form-row ff-mt-30' >
+						
+						<!--error textbox-->
+						<div class='ff-icon-input' >
+							<input class='ff-text ff-error' type='text' placeholder='Error' >
+							<i class='ion-ios-close' ></i>
+						</div>
+						<!--/error textbox-->
+						
+					</div>
+					
+					<div class='ff-form-row ff-mt-30' >
+						
+						<!--warning textbox-->
+						<div class='ff-icon-input' >
+							<input class='ff-text ff-warning' type='text' placeholder='Warning' >
+							<i class='ion-android-warning' ></i>
+						</div>
+						<!--/warning textbox-->
+						
+						
+					</div>
+					
+				</div>
+				<!--/form-box-->
+				
+			</div>
+		</div>
+		
+		
+		<!--for alert's close button-->
+		<script>
+			var $alerts = document.querySelectorAll('.ff-alert > .ff-close');
+			for( i=0; i<$alerts.length; i++){
+				$alerts[i].addEventListener('click',function(e){
+					e.preventDefault();
+					this.parentNode.parentNode.removeChild(this.parentNode);
+				});
+			}
+		</script>
+		<!--/for alert's close button-->
+		
+		
+	</body>
+</html>

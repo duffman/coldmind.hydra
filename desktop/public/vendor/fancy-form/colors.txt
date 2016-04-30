@@ -1,0 +1,9 @@
+READ DOUMENTATION TO KNOW HOW TO CHANGE THE COLOR
+
+brown
+purple-dark
+purple-light
+chenin
+green-light
+shadow-green
+wattle

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		
+		<!--title of your page-->
+		<title>FancyForms - Responsive CSS Forms Framework</title>
+		
+		
+		<!--=================================================================
+			CSS Stylesheets
+		=================================================================-->
+		<link rel='stylesheet' type='text/css' href='css/layout.css' >
+		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/grid.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/fancyforms.css' >
+		
+	</head>
+	
+	<body>
+		
+		
+		<div class='ff-center-content' >
+			<div class='ff-inner' >
+			
+				<!--form-box-->
+				<div class='ff-form-box ff-large' >
+				
+					<form>
+						
+						<!--header-->
+						<div class='ff-header' >
+							<h2>Booking</h2>
+						</div>
+						<!--/header-->
+						
+						
+						<!--separator-->
+						<div class='ff-separator ff-no-mt' >
+							<span>Your Details</span>
+						</div>
+						<!--/separator-->
+						
+						<div class='row' >
+							
+							<div class='col-sm-6' >
+								
+								<!--text input-->
+								<div class='ff-form-row' >
+									<div class='ff-icon-input' >
+										<input class='ff-text' type='text' placeholder='Your Name' >
+										<i class='ion-android-person' ></i>
+									</div>
+								</div>						
+								<!--/text input-->
+								
+							</div>
+							
+							<div class='col-sm-6' >
+								
+								<!--email input-->
+								<div class='ff-form-row' >
+									<div class='ff-icon-input' >
+										<input class='ff-text' type='email' placeholder='Email Address' >
+										<i class='ion-android-mail' ></i>
+									</div>
+								</div>
+								<!--/email input-->
+								
+							</div>
+							
+						</div>
+					
+						<div class='ff-form-row' >
+							<!--phone input-->
+							<div class='ff-icon-input' >
+								<input class='ff-text' type='text' placeholder='Phone' >
+								<i class='ion-ios-telephone' ></i>
+							</div>
+							<!--/phone input-->
+						</div>
+						
+						<!--separator-->
+						<div class='ff-separator' >
+							<span>Booking Details</span>
+						</div>
+						<!--/separator-->
+						
+						
+						<div class='row' >
+							
+							<div class='col-md-6' >
+								
+								<!--adults number-->
+								<div class='ff-form-row ff-icon-input' >
+									<input class='ff-text' type='number' placeholder='Adults' min='1' >
+									<i class='ion-android-person' ></i>
+								</div>
+								<!--/adults number-->
+								
+							</div>
+							
+							<div class='col-md-6' >
+								
+								<!--children number-->
+								<div class='ff-form-row ff-icon-input' >
+									<input class='ff-text' type='number' placeholder='Children' min='0' >
+									<i class='ion-android-person' ></i>
+								</div>
+								<!--/children number-->
+								
+							</div>
+							
+						</div>
+						
+						<div class='row' >
+							
+							<div class='col-md-6' >
+								
+								<!--check in date-->
+								<div class='ff-form-row ff-icon-input' >
+									<input class='ff-text' type='text' placeholder='Check-in date (dd/mm/yy)' >
+									<i class='ion-ios-calendar' ></i>
+								</div>
+								<!--/check in date-->
+								
+							</div>
+							
+							<div class='col-md-6' >
+								
+								<!--check out date-->
+								<div class='ff-form-row ff-icon-input' >
+									<input class='ff-text' type='text' placeholder='Check-out date (dd/mm/yy)' >
+									<i class='ion-ios-calendar' ></i>
+								</div>
+								<!--/check out date-->
+								
+							</div>
+							
+						</div>
+						
+						<div class='ff-form-row' >
+							
+							
+							<!--additional message-->
+							<div class='ff-icon-input' >
+								<textarea class='ff-text' placeholder='Additional Message' rows='5' ></textarea>
+								<i class='ion-ios-calendar' ></i>
+							</div>
+							<!--/additional message-->
+							
+						</div>
+						
+						
+						<div class='ff-form-row ff-mt-30 ff-right' >
+							
+							<!--continue button-->
+							<button type='submit' class='ff-btn' >
+								Continue
+							</button>
+							<!--/continue button-->
+							
+						</div>
+					
+					</form>
+				
+				</div>
+				<!--/form-box-->
+				
+				
+			</div>
+		</div>
+		
+		
+		<!--for alert's close button-->
+		<script>
+			var $alerts = document.querySelectorAll('.ff-alert > .ff-close');
+			for( i=0; i<$alerts.length; i++){
+				$alerts[i].addEventListener('click',function(e){
+					e.preventDefault();
+					this.parentNode.parentNode.removeChild(this.parentNode);
+				});
+			}
+		</script>
+		<!--/for alert's close button-->
+		
+	</body>
+	
+</html>

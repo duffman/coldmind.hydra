@@ -1,0 +1,58 @@
+{
+  "name": "time-for-an-old-school-tool",
+  "productName": "Coldmind Hydra - Development Studio 0.8.2",
+  "version": "0.0.0",
+  "description": "My perfect app",
+  "license": "MIT",
+  "repository": "Duffman/time-for-an-old-school-tool",
+  "author": {
+    "name": "Patrik Forsberg",
+    "email": "patfor@gmail.com",
+    "url": "zynaptic.io/hydra"
+  },
+  "scripts": {
+    "test": "xo",
+    "start": "electron .",
+    "build": "electron-packager . --out=dist --app-version=$npm_package_version --prune --asar --overwrite --all"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "index.css"
+  ],
+  "keywords": [
+    "Coldmind",
+    "Hydra",
+    "IDE",
+    "TypeScript",
+    "electron"
+  ],
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "commander": "^2.9.0",
+    "electron-debug": "^0.6.0",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "jquery": "^2.2.3",
+    "serve-favicon": "^2.3.0",
+    "socket.io": "^1.4.5"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "browserify": "^13.0.0",
+    "ejs": "^2.4.1",
+    "electron-packager": "^7.0.0",
+    "electron-prebuilt": "^0.37.6",
+    "jspm": "^0.16.34",
+    "webpack": "^1.13.0",
+    "webpack-stream": "^3.2.0",
+    "xo": "^0.14.0"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ]
+  }
+}

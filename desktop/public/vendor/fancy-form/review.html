@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		
+		<title>FancyForms - Responsive CSS Forms Framework</title>
+		
+		
+		<!--=================================================================
+			CSS Stylesheets
+		=================================================================-->
+		<link rel='stylesheet' type='text/css' href='css/layout.css' >
+		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/grid.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/fancyforms.css' >
+		
+	</head>
+	
+	<body>
+		
+		<div class='ff-center-content' >
+			<div class='ff-inner' >
+			
+				
+				<!--form-box-->
+				<div class='ff-form-box' >
+					<form>
+					
+						<!--header-->
+						<div class='ff-header' >
+							<h2>Review</h2>
+						</div>
+						<!--/header-->
+						
+						<!--name input-->
+						<div class='ff-form-row' >
+							<input class='ff-text' type='text' placeholder='Name' >
+						</div>
+						<!--/name input-->
+						
+						
+						<!--email input-->
+						<div class='ff-form-row' >
+							<input class='ff-text' type='email' placeholder='Email Address' >
+						</div>
+						<!--/email input-->
+						
+						<!--feedback input-->
+						<div class='ff-form-row' >
+							<textarea class='ff-text' rows='6' placeholder='Feedback' ></textarea>
+						</div>
+						<!--/feedback input-->
+						
+						
+						<div class='ff-form-row ff-mt-30' >
+							
+							<p>Ratings:</p>
+						
+							<!--ratings stars-->
+							<div class='ff-ratings'>
+								
+								<input type='radio' id='5s' name='star'>
+								<label for='5s'>
+									<i class='ion-ios-star'></i>
+								</label>
+								
+								<input type='radio' id='4s' name='star'>
+								<label for='4s'>
+									<i class='ion-ios-star'></i>
+								</label>
+								
+								<input type='radio' id='3s' name='star' checked>
+								<label for='3s'>
+									<i class='ion-ios-star'></i>
+								</label>
+								
+								<input type='radio' id='2s' name='star'>
+								<label for='2s'>
+									<i class='ion-ios-star'></i>
+								</label>
+								
+								<input type='radio' id='1s' name='star'>
+								<label for='1s'>
+									<i class='ion-ios-star'></i>
+								</label>
+								
+							</div>
+							<!--/ratings stars-->
+						
+						</div>
+						
+						<div class='ff-form-row ff-mt-30' >
+							
+							<!--submit review button-->
+							<button type='submit' class='ff-btn ff-block' >
+								Submit Review
+							</button>
+							<!--/submit review button-->
+							
+						</div>
+					
+					</form>
+				</div>
+				<!--/form-box-->
+				
+			</div>
+		</div>
+		
+		<!--for alert's close button-->
+		<script>
+			var $alerts = document.querySelectorAll('.ff-alert > .ff-close');
+			for( i=0; i<$alerts.length; i++){
+				$alerts[i].addEventListener('click',function(e){
+					e.preventDefault();
+					this.parentNode.parentNode.removeChild(this.parentNode);
+				});
+			}
+		</script>
+		<!--/for alert's close button-->
+		
+	</body>
+</html>

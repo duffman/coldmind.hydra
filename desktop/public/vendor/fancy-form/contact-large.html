@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		
+		<title>FancyForms - Responsive CSS Forms Framework</title>
+		
+		
+		<!--=================================================================
+			CSS Stylesheets
+		=================================================================-->
+		<link rel='stylesheet' type='text/css' href='css/layout.css' >
+		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/grid.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/fancyforms.css' >
+		
+	</head>
+	
+	<body>
+		
+		<div class='ff-center-content' >
+			<div class='ff-inner' >
+			
+				
+				<!--form-box-->
+				<div class='ff-form-box ff-large' >
+					<form>
+					
+						<!--header-->
+						<div class='ff-header' >
+							<h2>Contact Me</h2>
+						</div>
+						<!--/header-->
+						
+						<div class='row' >
+							
+							<div class='col-sm-6' >
+								
+								<!--name input-->
+								<div class='ff-form-row' >
+									<input class='ff-text' type='text' placeholder='Your Name' >
+								</div>
+								<!--/name input-->
+								
+							</div>
+							
+							<div class='col-sm-6' >
+							
+								<!--email input-->
+								<div class='ff-form-row' >
+									<input class='ff-text' type='email' placeholder='Email Address' >
+								</div>
+								<!--/email input-->
+								
+							</div>
+							
+						</div>
+						
+						<div class='ff-form-row' >
+							
+							<!--subject input-->
+							<input class='ff-text' type='text' placeholder='Subject' >
+							<!--/subject input-->
+							
+						</div>
+						
+						<div class='ff-form-row' >
+							
+							<!--message input-->
+							<textarea class='ff-text' placeholder='Message' rows='7' ></textarea>
+							<!--/message input-->
+							
+						</div>
+						
+						<div class='ff-form-row ff-mt-30' >
+							
+							<!--send message btn-->
+							<button type='submit' class='ff-btn ff-block' >
+								Send Message
+							</button>
+							<!--/send message btn-->
+							
+						</div>
+					
+					</form>
+					
+				</div>
+				<!--/form-box-->
+				
+			</div>
+		</div>
+		
+		<!--for alert's close button-->
+		<script>
+			var $alerts = document.querySelectorAll('.ff-alert > .ff-close');
+			for( i=0; i<$alerts.length; i++){
+				$alerts[i].addEventListener('click',function(e){
+					e.preventDefault();
+					this.parentNode.parentNode.removeChild(this.parentNode);
+				});
+			}
+		</script>
+		<!--/for alert's close button-->
+		
+	</body>
+</html>

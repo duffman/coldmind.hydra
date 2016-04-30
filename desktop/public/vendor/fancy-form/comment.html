@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		
+		<title>FancyForms - Responsive CSS Forms Framework</title>
+		
+		
+		<!--=================================================================
+			CSS Stylesheets
+		=================================================================-->
+		<link rel='stylesheet' type='text/css' href='css/layout.css' >
+		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/grid.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/fancyforms.css' >
+		
+	</head>
+	
+	<body>
+		
+		
+		<div class='ff-center-content' >
+			<div class='ff-inner' >
+			
+				<!--form box-->
+				<div class='ff-form-box' >
+					<form>
+					
+						<!--header-->
+						<div class='ff-header' >
+							<h2>Add Comment</h2>
+						</div>
+						<!--/header-->
+						
+						<div class='ff-form-row' >
+							
+							<!--name input-->
+							<div class='ff-icon-input' >
+								<input class='ff-text' type='text' placeholder='Your Name' >
+								<i class='ion-android-person' ></i>
+							</div>
+							<!--/name input-->
+							
+						</div>
+						
+						<div class='ff-form-row' >
+						
+							
+							<!--email input-->
+							<div class='ff-icon-input' >
+								<input class='ff-text' type='email' placeholder='Email Address' >
+								<i class='ion-android-mail' ></i>
+							</div>
+							<!--/email input-->
+							
+							
+						</div>
+						
+						<div class='ff-form-row' >
+							
+							<!--comment input-->
+							<div class='ff-icon-input' >
+								<textarea class='ff-text' placeholder='Comment' rows='7' ></textarea>
+								<i class='ion-document-text' ></i>
+							</div>
+							<!--/comment input-->
+							
+						</div>
+						
+						<div class='ff-form-row ff-mt-30' >
+							
+							<!--Notify me checkbox-->
+							<div class='ff-checkbox-main' >
+								<div class='ff-checkbox' >
+									<input id='notify' type='checkbox' checked>
+									<span></span>
+								</div>
+								<label class='ff-label' for='notify' >Notify me about any reply</label>
+							</div>
+							<!--/Notify me checkbox-->
+							
+						</div>
+						
+						<div class='ff-form-row ff-mt-30' >
+							
+							<!--comment button-->
+							<button type='submit' class='ff-btn ff-block' >
+								Comment
+							</button>
+							<!--/comment button-->
+							
+						</div>
+						
+					</form>
+				</div>
+				<!--/form box-->
+				
+			</div>
+		</div>
+		
+		
+		<!--for alert's close button-->
+		<script>
+			var $alerts = document.querySelectorAll('.ff-alert > .ff-close');
+			for( i=0; i<$alerts.length; i++){
+				$alerts[i].addEventListener('click',function(e){
+					e.preventDefault();
+					this.parentNode.parentNode.removeChild(this.parentNode);
+				});
+			}
+		</script>
+		<!--/for alert's close button-->
+		
+	</body>	
+</html>
