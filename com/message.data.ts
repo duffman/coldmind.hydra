@@ -9,13 +9,11 @@
 import { ComProtocol } from "./message.types";
 import { IZynapticNode, ZynapticNode } from "../core/data.models/zynaptic-node";
 
-class MessageModel {
-	public type: ComProtocol.MessageType;
-	public data: IZynapticNode;
+class MessageData {
+	public internalData: IZynapticNode;
 	
-	constructor(messageType: ComProtocol.MessageType) {
-		this.type = messageType;
+	constructor() {
 	}
 }
 
-export { MessageModel };
+export { MessageData };

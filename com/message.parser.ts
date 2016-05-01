@@ -5,11 +5,16 @@
 [ZYNAPTIC_CODE_FILE_HEADER:END]
 */
 
-
 /// <reference path="../typings/main.d.ts" />
 
 import { injectable, inject } from "inversify";
+import { MessageModel } from "./message.model";
 
 export class MessageParser {
+	constructor() {
+	}
 	
+	public parseMessage() {
+		
+	}
 }

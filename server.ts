@@ -95,7 +95,8 @@ class AppLauncher {
 	}
 	
 	/**
-	 * 
+	 *	Setup the browser sync functionality.
+	 *	IMPORTANT: ONLY use during development
 	 */
 	public initBrowserSync(proxyPort: number) {
 		var proxyUrl = "http://localhost:" + proxyPort.toString();
@@ -116,8 +117,6 @@ class AppLauncher {
 	 * Initialize Socket IO, setup event handlers, etc...
 	 */
 	public initWebSocket() {
-
-		// Setup socket io event listeners
 		//io.on(WebSocketEvents.CONNECTION, function(socket: SocketIO.Socket) {
 		io.on("connection", function(socket: SocketIO.Socket) {
 			console.log("Client Connected (id)", socket.id);
@@ -128,9 +127,10 @@ class AppLauncher {
 				}
 			)
 
+			/*
 			io.on("message", function(data: any){
 				console.log("SOCKET_IOYOHO", data);
-			});
+			});*/
 
 
 			socket.broadcast.emit("init", {});
