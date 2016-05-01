@@ -1,1 +1,2 @@
-declare var AppRoot: any;
+/// <reference path="./node.d.ts" />
+/// <reference path="./inversify/inversify.d.ts" />

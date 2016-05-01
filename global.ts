@@ -7,14 +7,6 @@
 
 "use strict"
 
-module Types {
-	export enum ResourceType {
-		Unknown,
-		Style,
-		Script,
-	}
-}
-
 module Constants {
 }
 
@@ -51,4 +43,4 @@ module Global {
 	}
 }
 
-export { Global, Types, Constants };
+export { Global, Constants };

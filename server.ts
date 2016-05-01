@@ -10,18 +10,13 @@ var express				= require('express');
 var webServer			= express();
 var wsServer			= require('http').Server(webServer);
 var io					= require('socket.io')(wsServer);
-
 var favicon				= require('serve-favicon');
-//var cookieParser		= require('cookie-parser');
 var bodyParser			= require('body-parser');
-//var logger				= require('morgan');
-
 var appPackage			= require( path.join(__dirname, 'package.json') );
 var program				= require('commander');
 var contentDisposition	= require("content-disposition");
-var absoluteRootPath	= "/";
-
 var browserSync			= require('browser-sync');
+var absoluteRootPath	= "/";
 
 import { Global, Constants }	from "./global";
 import { WebSocketEvents }		from "./core/net/websocket/websocket.events";
@@ -121,9 +116,22 @@ class AppLauncher {
 	 * Initialize Socket IO, setup event handlers, etc...
 	 */
 	public initWebSocket() {
+
 		// Setup socket io event listeners
-		io.on(WebSocketEvents.CONNECTION, function(socket: SocketIO.Socket) {
+		//io.on(WebSocketEvents.CONNECTION, function(socket: SocketIO.Socket) {
+		io.on("connection", function(socket: SocketIO.Socket) {
 			console.log("Client Connected (id)", socket.id);
+
+			socket.emit("message",
+				{
+					"type":1
+				}
+			)
+
+			io.on("message", function(data: any){
+				console.log("SOCKET_IOYOHO", data);
+			});
+
 
 			socket.broadcast.emit("init", {});
 

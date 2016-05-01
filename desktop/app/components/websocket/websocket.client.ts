@@ -2,7 +2,7 @@
 [ZYNAPTIC_CODE_FILE_HEADER STYLE="FULL"	/]
 [CREATED YEAR="16" MONTH="24" DAY="24" /]
 [DESCRIPTION]Client Web Socket wrapper implementation[/DESCRIPTION]
-[ZYNAPTIC_CODE_FILE_HEADER:BEGIN]
+[ZYNAPTIC_CODE_FILE_HEADER:END]
 */
 
 /// <reference path="../../../../typings/node.d.ts" />
