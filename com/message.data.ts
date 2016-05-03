@@ -7,7 +7,7 @@
 /// <reference path="../typings/main.d.ts" />
 
 import { ComProtocol } from "./message.types";
-import { IZynapticNode, ZynapticNode } from "../core/data.models/zynaptic-node";
+import { IZynapticNode, ZynapticNode } from "../core/data-models/zynaptic-node";
 
 class MessageData {
 	public data: IZynapticNode;
