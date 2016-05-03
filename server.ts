@@ -20,6 +20,7 @@ var absoluteRootPath	= "/";
 
 import { Global, Constants }	from "./global";
 import { WebSocketEvents }		from "./core/net/websocket/websocket.events";
+//import { Message }
 
 program
 	.version(appPackage.version)
@@ -54,15 +55,16 @@ class AppLauncher {
 		);
 
 		webServer.get('/', function(req, res) {
-			//res.sendFile("./server-test.html");
-			res.render('app');
+			res.render("app");
 		});
 
+		/*
 		webServer.get('/gui', function(req, res) {
-			//res.sendFile("./server-test.html");
+			res.sendFile("./server-test.html");
 			res.render('gui');
 		});
-
+		*/
+		
 		webServer.use(favicon(__dirname + "/favicon.ico"));
 		webServer.set('view engine', 'ejs'); 
 		webServer.set('views', './desktop/views');
@@ -74,6 +76,9 @@ class AppLauncher {
 		webServer.use(express.static('./desktop/'));
 		webServer.use(express.static('./desktop/node_modules/'));
 		webServer.use("/res", express.static("./desktop/public/"));
+
+		// Asset Paths
+		webServer.use("/styles", express.static("./desktop/public/"));
 
 		this.initWebSocket();
 		this.initBrowserSync(this.serverPort);

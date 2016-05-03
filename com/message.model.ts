@@ -7,14 +7,15 @@
 /// <reference path="../typings/main.d.ts" />
 
 import { ComProtocol } from "./message.types";
-import { IZynapticNode, ZynapticNode } from "../core/data.models/zynaptic-node";
+import { MessageData } from "./message.data";
 
 class MessageModel {
 	public type: ComProtocol.MessageType;
-	public data: IZynapticNode;
+	public data: MessageData;
 	
 	constructor(messageType: ComProtocol.MessageType) {
 		this.type = messageType;
+		this.data = new MessageData();
 	}
 }
 

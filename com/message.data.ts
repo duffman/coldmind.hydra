@@ -10,9 +10,10 @@ import { ComProtocol } from "./message.types";
 import { IZynapticNode, ZynapticNode } from "../core/data.models/zynaptic-node";
 
 class MessageData {
-	public internalData: IZynapticNode;
+	public data: IZynapticNode;
 	
 	constructor() {
+		this.data = new ZynapticNode("");
 	}
 }
 
