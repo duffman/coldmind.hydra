@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="yes" ?>
+<project version="0.7.3">
+	<name>BeatBucket</name>
+	<description>Main BeatBucket Web</description>	
+
+	<editor>
+		<useRealTabs>true</useRealTabs>
+		
+	</editor>
+
+	<projectFiles>
+		
+		
+		
+	</projectFiles>
+</project>

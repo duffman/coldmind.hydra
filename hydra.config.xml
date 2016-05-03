@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes" ?>
+<configuration>
+	<appServer>
+		<http>
+			<port>6710</port>
+		</http>
+		<webSockets>
+			<port>6710</port>
+		</http>
+	</appServer>
+</configuration>

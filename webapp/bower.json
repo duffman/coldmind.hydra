@@ -1,0 +1,23 @@
+{
+  "name": "hydra.webapp",
+  "homepage": "http://www.coldmind.com",
+  "authors": [
+    "Patrik Forsberg <mail@patrik.guru>"
+  ],
+  "description": "Hydra Web Application",
+  "main": "index.js",
+  "keywords": [
+    "Hydra",
+    "SPA",
+    "Coldmind"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
