@@ -5,6 +5,7 @@
 */
 
 import { HydraWebApplication } from "../../core/framework/web.application";
+import { WebSocketClient } from "./components/websocket.client";
 
 export class Main extends HydraWebApplication {
 	constructor() {
