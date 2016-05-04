@@ -1,0 +1,28 @@
+#! /usr/bin/env node
+
+/// <reference path="typings/express.d.ts" />
+
+const version = [0, 7, 3];
+const versionString = version.join(".");
+var serverPort = 80;
+
+console.log("Hydra Portable Server v" + versionString);
+console.log("Web Root Directory Directory: " + __dirname);
+
+var express = require("express");
+var app = express();
+
+app.use(express.static(__dirname));
+
+app.listen(serverPort, function(error) {
+	console.log("Listening on port: " + serverPort);
+});
+
+
+//app.use(express.static(__dirname + '/public'));
+
+/*
+app.get("/", function (req, res) {
+	res.send("Hello World!");
+});
+*/

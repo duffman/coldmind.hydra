@@ -28,7 +28,7 @@ program
 	.parse(process.argv);
 
 class AppLauncher {
-	serverPort: number				= 6060;
+	serverPort: number				= 6065;
 	wss: SocketIO.Server			= wsServer;
 	appRoot: string					= "./webapp/";
 	public syncProxyPort: string	= "";

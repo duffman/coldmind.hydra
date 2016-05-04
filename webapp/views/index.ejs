@@ -13,8 +13,11 @@
 
 
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
 	<script src="/scripts/system.js"></script>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+
 
 	<script>
 	System.config({
@@ -49,7 +52,7 @@
         	this.socket = null;
 			
 			this.init = function() {
-				console.log("initialize");
+				console.log("index.ejs - initialize");
 				this.socket = new io();	
 
 				this.socket.on(CONNECT, function(){
@@ -88,35 +91,19 @@
 	
 		var self = this;
 
-        $(document).ready(function() {
+		$(document).ready(function() {
 			$('#btnTest').bind('click', function(event) {
 				var dataString = "Hello kalle";
 				console.log("Emitting data:", dataString);
 				self.clientCore.sendData(dataString);
 			});
-        });
-
-        /*
-        const remote = require('electron').remote;
-        const Menu = remote.Menu;
-        const MenuItem = remote.MenuItem;
-
-        var menu = new Menu();
-        menu.append(new MenuItem({ label: 'MenuItem1', click: function() { console.log('item 1 clicked'); } }));
-        menu.append(new MenuItem({ type: 'separator' }));
-        menu.append(new MenuItem({ label: 'MenuItem2', type: 'checkbox', checked: true }));
-
-        window.addEventListener('contextmenu', function (e) {
-        e.preventDefault();
-        menu.popup(remote.getCurrentWindow());
-        }, false);
-        */
+		});
 	</script>
 </head>
 <body>
     <div class="container">
 		<header>
-			<h1>Electron boilerplate</h1>
+			<h1>Coldmind Hydra Framework</h1>
 		</header>
 		<section class="main">
         

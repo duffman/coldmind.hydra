@@ -12,7 +12,16 @@
 	"exclude": [
 		"node_modules",
 		"./lib/ace-builds",
+		"_temp",
 		"desktop",
+		"webapp",
+
+
+		"core/editor",
+
+
+		"core/zynaptic.igniter",
+
 		"tools"
 	]
 }

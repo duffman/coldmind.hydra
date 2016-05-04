@@ -5,8 +5,8 @@
 [ZYNAPTIC_CODE_FILE_HEADER:BEGIN]
 */
 
-/// <reference path="../typings/node.d.ts" />
-/// <reference path="../typings/socket.io-client.d.ts" />
+/// <reference path="../../../typings/node.d.ts" />
+/// <reference path="../../../typings/socket.io-client.d.ts" />
 
 "use strict";
 
@@ -18,9 +18,25 @@ import { WebSocketEvents } from  "./websocket.events";
 export class WebSocketClient {
 	socket: SocketIOClient.Socket;
 
-	constructor() {
-		console.log("WebSocket Client Create...");
+	/**
+	 *	@param {boolean} if set to true, the event listeners and socket
+	 *	connection will be setup automatically, otherwize use
+	 *  +======+ IO(url:String, opts:Object):Socket +======+
+	 *	when instanciating io()
+	 */
+	/*
+	constructor(autoInit: boolean = true) {
+		//if (Global.DebugReportingLevel == 1)
+		
+		console.log("");
+
+		this.setupEventListeners();
+
+		if (autoInit) {
+			this.initSocket();
+		}
 	}
+	*/
 
 	public initAndStart() {
 		console.log("Initializing Web Socket Client...");

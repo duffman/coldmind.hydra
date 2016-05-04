@@ -1,0 +1,11 @@
+{
+  "name": "hydra.webapp",
+  "version": "0.7.3",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "runtest"
+  },
+  "author": "Patrik Forsberg <mail@patrik.guru>",
+  "license": "ISC"
+}
